@@ -226,7 +226,7 @@ func RestartService(config config.Config) {
 		exePath = filepath.Join(config.GamePath, "Pal", "Binaries", "Win64", "PalServer-Win64-Test-Cmd.exe")
 		//exePath = "\"" + exePath + "\""
 		args = []string{
-			"Pal",
+			"EpicApp=PalServer",
 			"-RconEnabled=True",
 			fmt.Sprintf("-AdminPassword=%s", config.WorldSettings.AdminPassword),
 			fmt.Sprintf("-port=%d", config.WorldSettings.PublicPort),
