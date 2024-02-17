@@ -1,11 +1,12 @@
 name: Cross Compile Go Project
 
 on:
-  pull_request:
-    types: [opened, synchronize]
   push:
-    tags:
-      - '*'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
